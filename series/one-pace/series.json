@@ -12,6 +12,7 @@
     "poster_extension": "png",
     "seasons":
     [
+        "Specials",
         "Romance Dawn",
         "Orange Town",
         "Syrup Village",
@@ -49,6 +50,19 @@
         "Wano",
         "Egghead"
     ],
+    "special_episodes":
+    {
+        "[One Pace][0] Strong World [480p][76B2C869].mkv": "01",
+        "[One Pace] Straw Hat Theatre [720p][415455AE].mkv": "02",
+        "[One Pace][Romance Dawn v2] Romance Dawn v2 [1080p][5E77445F].mkv": "03",
+        "[One Pace][236-262 Covers] Wapol's Omnivorous Hurrah [720p][05BE81E6].mkv": "04",
+        "[One Pace][823-824] Whole Cake Island 01 [720p][EDB72EE5].mp4": "05",
+        "[One Pace][42,22] Gaimon [480p][EFF6059A].mkv": "07",
+        "[One Pace] Tournament of Power.mp4": "08",
+        "[One Pace] One Piece Fan Letter [1080p][59510B34].mkv": "09",
+        "[One Pace][199-201] Arabasta 16 [1080p][2F71D53E].mkv": "10",
+        "[One Pace] Warship Island 01 [1080p][B4925314].mkv": "11"
+    },
     "dressrosa_episodes":
     {
         "700-701": "01",
@@ -100,6 +114,85 @@
         "796-797": "47",
         "798-800": "48"
     },
+    "Specials": [
+        {
+            "title": "Strong World",
+            "summary": "",
+            "chapters": "Chapter 0",
+            "episodes": "One Piece Film Strong World: Episode 0",
+            "original_airdate": "2010-04-16"
+        },
+        {
+            "title": "Straw Hat Theatre",
+            "summary": "",
+            "chapters": "The 2nd Log: Sanji, The 3rd Log: Nami, The 5th Log: Chopper, The 6th Log: Arabasta, The 7th Log: Vivi",
+            "episodes": "279-283",
+            "original_airdate": "2006-05-02"
+        },
+        {
+            "title": "Romance Dawn, Version 2",
+            "summary": "",
+            "chapters": "Romance Dawn, Version 2",
+            "episodes": "907",
+            "original_airdate": "2019-10-20"
+        },
+        {
+            "title": "Wapol's Omnivorous Hurrah",
+            "summary": "",
+            "chapters": "236-262 Cover Stories",
+            "episodes": "778",
+            "original_airdate": "2017-02-26"
+        },
+        {
+            "title": "Whole Cake Island 01 (April Fools 2017)",
+            "summary": "",
+            "chapters": "823-824",
+            "episodes": "777-779, 783",
+            "original_airdate": "2017-04-09"
+        },
+        {
+            "title": "Whole Cake Island 39 (April Fools 2019)",
+            "summary": "After the Straw Hats die, Tommy Wiseau picks up the pieces and explores a story of love, betrayal, and doggies.",
+            "chapters": "901-902",
+            "episodes": "876-877",
+            "original_airdate": "2019-03-17"
+        },
+        {
+            "title": "Gaimon 01 (April Fools 2021)",
+            "summary": "The Straw Hats venture to the fabled \"Treasure Island\" to discover riches, adventure, and... strange creatures. Oh, and everything is in Klingon for some reason.",
+            "chapters": "42, 22",
+            "episodes": "18",
+            "original_airdate": "2000-03-15"
+        },
+        {
+            "title": "Tournament of Power",
+            "summary": "The stage is set for an epic battle as the greatest warriors from different universes to fight for their survival. Get ready for an unforgettable fight like no other, as this episode will have you holding your breath until the very end.",
+            "chapters": "N/A",
+            "episodes": "N/A",
+            "original_airdate": "2017-07-02"
+        },
+        {
+            "title": "One Piece Fan Letter",
+            "summary": "As the Straw Hat Pirates reunite on the Sabaody Archipelago, the various members of the island are drawn together like pieces of a puzzle, their love of certain members of the crew driving their actions and emotions.",
+            "chapters": "N/A",
+            "episodes": "One Piece Fan Letter",
+            "original_airdate": "2024-10-20"
+        },
+        {
+            "title": "The Desert Doo Doo Hits the Fan (April Fools 2024)",
+            "summary": "When Crocodile yells \"Oh no! Water!\" it's game over! Join Monkey D. Luffy and his courageous crew—Nami, Usopp, Chopper (who does doctoring), Sanji, and Zolo—as they save Alabasta from the crooked clutches of Baroque Works!",
+            "chapters": "199-201",
+            "episodes": "121-122",
+            "original_airdate": "2002-08-11"
+        },
+        {
+            "title": "Warship Island 01 (April Fools 2025)",
+            "summary": "",
+            "chapters": "N/A",
+            "episodes": "55",
+            "original_airdate": "2001-01-24"
+        }
+    ],
     "Romance Dawn": [
         {
             "title": "The Dawn of an Adventure",

@@ -25,22 +25,31 @@ SERIES_DATA = None
 
 
 def resolve_metadata_from_episode_list(season: int, episode: int):
-    season_name = SERIES_DATA['seasons'][season - 1]
-    if isinstance(season_name, list):
-        season_name = season_name[0]  # use the og/outdated season names because that's what's in the series.json file
-
-    if SERIES_DATA['name'] == 'One Pace' and season == SERIES_DATA['lrll_season_number']:
-        # special exception for LRLL because it currently has an episode 0 due to the edit's age and series transitioning to 16:9 HD at this point
-        episode_index = episode
-    else:
+    if season == 0:
+        season_name = 'Specials'
         episode_index = episode - 1
+    else:
+        # Check if 'Specials' is at index 0 of seasons list
+        if SERIES_DATA['seasons'] and SERIES_DATA['seasons'][0] == 'Specials':
+            season_name = SERIES_DATA['seasons'][season]
+        else:
+            season_name = SERIES_DATA['seasons'][season - 1]
 
-    season = SERIES_DATA.get(season_name)
-    if season is None:
+        if isinstance(season_name, list):
+            season_name = season_name[0]  # use the og/outdated season names because that's what's in the series.json file
+
+        if SERIES_DATA['name'] == 'One Pace' and season == SERIES_DATA['lrll_season_number']:
+            # special exception for LRLL because it currently has an episode 0 due to the edit's age and series transitioning to 16:9 HD at this point
+            episode_index = episode
+        else:
+            episode_index = episode - 1
+
+    season_data = SERIES_DATA.get(season_name)
+    if season_data is None:
         return None
     else:
-        if episode_index < len(season):
-            return season[episode_index]
+        if episode_index < len(season_data):
+            return season_data[episode_index]
         else:
             # skip episode that's > than the current list
             # this shouldn't happen outside of cases where users have added other One Piece edits to the series.
@@ -189,31 +198,44 @@ def organize_files():
 
             final_name = file
             if SERIES_DATA['series_match_type'] == 'season_episodes':
-                season_index = 0
-                for season in SERIES_DATA['seasons']:
-                    if SERIES_DATA['name'] == 'One Pace':
-                        if season == 'Dressrosa' and file.find('Dressrosa') == -1:
-                            # special case snippet to rename Dressrosa episodes for One Pace, specifically from its batch torrent.
-                            match = re.match(r'\[One Pace] Chapter ([-0-9]*) \[720p](\[.*])', file)
-                            if match is not None and file.find('Chapter') != -1:
-                                episode_number = SERIES_DATA['dressrosa_episodes'].get(match.group(1))
-                                final_name = f'[One Pace][{match.group(1)}] Dressrosa {episode_number} [720p]{match.group(2)}.mkv'
-                                print(f'Renaming Dressrosa episode from {file} to {final_name}')
+                if SERIES_DATA['name'] == 'One Pace' and 'special_episodes' in SERIES_DATA and file in SERIES_DATA['special_episodes']:
+                    # special episodes blacklist & renaming for One Pace
+                    special_ep_number = SERIES_DATA['special_episodes'][file]
+                    final_name = f'S00E{special_ep_number} - {file}'
+                    print(f'Renaming special episode from {file} to {final_name}')
+                    season_index = -1
+                else:
+                    season_index = 0
+                    for season in SERIES_DATA['seasons']:
+                        if season == 'Specials':
+                            continue
 
-                    if final_name == file:
-                        season_name = season if isinstance(season, list) is False else season[0]
-                        match = re.match(SERIES_DATA['series_match_regex'].format(season_name), file)
+                        if SERIES_DATA['name'] == 'One Pace':
+                            if season == 'Dressrosa' and file.find('Dressrosa') == -1:
+                                # special case snippet to rename Dressrosa episodes for One Pace, specifically from its batch torrent.
+                                match = re.match(r'\[One Pace] Chapter ([-0-9]*) \[720p](\[.*])', file)
+                                if match is not None and file.find('Chapter') != -1:
+                                    episode_number = SERIES_DATA['dressrosa_episodes'].get(match.group(1))
+                                    final_name = f'[One Pace][{match.group(1)}] Dressrosa {episode_number} [720p]{match.group(2)}.mkv'
+                                    print(f'Renaming Dressrosa episode from {file} to {final_name}')
 
-                    if match is None:
-                        season_index += 1
+                        if final_name == file:
+                            season_name = season if isinstance(season, list) is False else season[0]
+                            match = re.match(SERIES_DATA['series_match_regex'].format(season_name), file)
+
+                        if match is None:
+                            season_index += 1
+                            continue
+
+                        if SERIES_DATA['name'] == 'One Pace':
+                            # another special case to rename cover story special MKVs because their files don't have episode numbers, but the streamable MP4s do
+                            if file.endswith('.mkv') and season in ['The Adventures of Buggy\'s Crew', 'The Trials of Koby-Meppo', 'The Adventures of the Straw Hats']:
+                                final_name = final_name.replace(season, f'{season} 01')
+
+                        break
+                    else:
+                        # No regular season matched
                         continue
-
-                    if SERIES_DATA['name'] == 'One Pace':
-                        # another special case to rename cover story special MKVs because their files don't have episode numbers, but the streamable MP4s do
-                        if file.endswith('.mkv') and season in ['The Adventures of Buggy\'s Crew', 'The Trials of Koby-Meppo', 'The Adventures of the Straw Hats']:
-                            final_name = final_name.replace(season, f'{season} 01')
-
-                    break
             elif SERIES_DATA['series_match_type'] == 'absolute_episodes':
                 # preemptively remove dub and sub from episode titles for metadata matching since it's present in various edits
                 temp_file = file.replace(' (dub)', '')
@@ -252,8 +274,8 @@ def apply_plex_metadata():
     episodes_changed = 0
     episodes: Episode = series.episodes()
     for episode in episodes:
-        if episode.seasonNumber == 0:
-            # skip specials
+        if episode.seasonNumber == 0 and 'Specials' not in SERIES_DATA.get('seasons', []):
+            # skip specials for edits without specials configured
             continue
 
         if SERIES_DATA['series_match_type'] == 'season_episodes':
@@ -487,7 +509,7 @@ def move_episode_file(dest_path: str, source_path: str, file: str, newfile: str,
                 os.makedirs(SERIES_DATA['name'])
 
     season_number = season_index + 1
-    season_path = 'Specials' if season_number == 0 else f'Season {season_number:02d}'
+    season_path = f'Season {season_number:02d}'
 
     if os.path.exists(f'{dest_path}/{season_path}') is False:
         print(f'creating season folder for season {season_number}')
@@ -650,4 +672,5 @@ def clear_terminal():
         os.system('clear')
 
 
-main()
+if __name__ == '__main__':
+    main()
