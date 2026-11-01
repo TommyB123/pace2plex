@@ -62,7 +62,8 @@
         "[One Pace] One Piece Fan Letter [1080p][59510B34].mkv": "09",
         "[One Pace][199-201] Arabasta 16 [1080p][2F71D53E].mkv": "10",
         "[One Pace] Warship Island 01 [1080p][B4925314].mkv": "11",
-        "[One Pace][97.5] Loguetown 01.5 [1080p][A6C3657B].mkv": "12"
+        "[One Pace][97.5] Loguetown 01.5 [1080p][A6C3657B].mkv": "12",
+        "[1056 Filler] End of Wano 03.5 - Farewell.mp4": "13"
     },
     "dressrosa_episodes":
     {
@@ -199,6 +200,13 @@
             "chapters": "Loguetown Arc (Novel)",
             "episodes": "48, 50",
             "original_airdate": "2000-11-22"
+        },
+        {
+            "title": "Farewell",
+            "summary": "Before their departure from Wano Country, the Straw Hat Pirates say their goodbyes to their comrades. Luffy visits the ruins of Kuri Castle, where he parts with the Nine Red Scabbards and the Mink Tribe, and Tsurujo's shop, where he leaves Tama. Meanwhile, Zoro visits Yasuie and Pedro's graves, and Sanji sells the last of his soba in the Flower Capital.",
+            "chapters": "Filler",
+            "episodes": "1084",
+            "original_airdate": "2023-11-19"
         }
     ],
     "Romance Dawn": [
