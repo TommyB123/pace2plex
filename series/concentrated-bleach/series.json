@@ -18,7 +18,7 @@
         {
             "season": 1,
             "episode": 1,
-            "absolute_episode": 1,
+            "absolute_episode": "01",
             "title": "Death and Strawberry",
             "summary": "Ichigo Kurosaki has been able to see ghosts for as long as he can remember. Rukia Kuchiki is a soul reaper sent to Karakura Town to reap the souls of monsters. When one such monster forces the two onto the same path, they must work together to protect the people of the town.",
             "original_airdate": "2004-10-05",
@@ -29,7 +29,7 @@
         {
             "season": 1,
             "episode": 2,
-            "absolute_episode": 2,
+            "absolute_episode": "02",
             "title": "Starter",
             "summary": "One of Ichigo's classmates, Orihime Inoue, is being targeted by a hollow! But it isn't random; He seems to have a strange interest in specifically her...",
             "original_airdate": "2004-10-12",
@@ -40,7 +40,7 @@
         {
             "season": 1,
             "episode": 3,
-            "absolute_episode": 3,
+            "absolute_episode": "03",
             "title": "The Pink-Cheeked Cockatiel",
             "summary": "Chad is given a bird that can magically talk! But this bird seems to bring misfortune wherever it goes...",
             "original_airdate": "2004-10-26",
@@ -51,7 +51,7 @@
         {
             "season": 1,
             "episode": 4,
-            "absolute_episode": 4,
+            "absolute_episode": "04",
             "title": "Bad Standard",
             "summary": "Rukia finds a way to put a replacement soul in Ichigo's body while he's a soul reaper! They tell him to act normal while they're gone, but he seems to have other plans...",
             "original_airdate": "2004-11-09",
@@ -62,7 +62,7 @@
         {
             "season": 1,
             "episode": 5,
-            "absolute_episode": 5,
+            "absolute_episode": "05",
             "title": "June 17th -memories in the rain-",
             "summary": "On the anniversary of his mother's death, Ichigo and his family takes their annual visit to her grave. While there, he encounters a familiar face that brings about memories of his past...",
             "original_airdate": "2004-11-23",
@@ -73,7 +73,7 @@
         {
             "season": 1,
             "episode": 6,
-            "absolute_episode": 6,
+            "absolute_episode": "06",
             "title": "Spirits AREN'T Always With Us",
             "summary": "Japan's most popular ghost hunting show is broadcasting live from Karakura Town! Fights will only get more intense from now on, so take this opportunity to unwind.",
             "original_airdate": "2004-12-07",
@@ -84,7 +84,7 @@
         {
             "season": 1,
             "episode": 7,
-            "absolute_episode": 7,
+            "absolute_episode": "07",
             "title": "Quincy Archer Hates You",
             "summary": "In the wake of Don Kanonji's show, a mysterious archer who has been lying in wait finally reveals himself...",
             "original_airdate": "2004-12-14",
@@ -95,7 +95,7 @@
         {
             "season": 1,
             "episode": 8,
-            "absolute_episode": 8,
+            "absolute_episode": "08",
             "title": "Crossing the Rubicon",
             "summary": "Uryu proclaims the rules of his duel with Ichigo and it threatens to endanger everyone in Karakura Town! The die has already been cast; the only option left is to cross the Rubicon...",
             "original_airdate": "2004-12-21",
@@ -106,7 +106,7 @@
         {
             "season": 1,
             "episode": 9,
-            "absolute_episode": 9,
+            "absolute_episode": "09",
             "title": "Menos Grande",
             "summary": "Ichigo and Uryu's duel nears its end as hordes of hollows invade Karakura Town!",
             "original_airdate": "2004-12-28",
@@ -414,7 +414,7 @@
         {
             "season": 0,
             "episode": 2,
-            "absolute_episode": "35.5 (0)",
+            "absolute_episode": "35.5",
             "title": "the rotator; the sand",
             "summary": "The world turns, and we are powerless to stop it. All we can do is hope for a way to change our fates.",
             "original_airdate": "2007-01-04",
