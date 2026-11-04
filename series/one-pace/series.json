@@ -26,7 +26,7 @@
         "The Trials of Koby-Meppo",
         "Little Garden",
         "Drum Island",
-        ["Arabasta", "Alabasta"],
+        ["Alabasta", "Arabasta"],
         "Jaya",
         "Skypiea",
         "Long Ring Long Land",
@@ -127,7 +127,7 @@
         {
             "title": "Straw Hat Theatre",
             "summary": "",
-            "chapters": "The 2nd Log: Sanji, The 3rd Log: Nami, The 5th Log: Chopper, The 6th Log: Arabasta, The 7th Log: Vivi",
+            "chapters": "The 2nd Log: Sanji, The 3rd Log: Nami, The 5th Log: Chopper, The 6th Log: Alabasta, The 7th Log: Vivi",
             "episodes": "279-283",
             "original_airdate": "2006-05-02"
         },
@@ -565,7 +565,7 @@
     "Drum Island": [
         {
             "title": "Tin Plate Wapol",
-            "summary": "En route to Arabasta, Nami falls ill. Without a doctor aboard the Going Merry, the Straw Hats must decide whether to stay the course or find more immediate help. As their ship crosses into a frigid area, a figure is seen standing on the water's surface.",
+            "summary": "En route to Alabasta, Nami falls ill. Without a doctor aboard the Going Merry, the Straw Hats must decide whether to stay the course or find more immediate help. As their ship crosses into a frigid area, a figure is seen standing on the water's surface.",
             "chapters": "129-132",
             "episodes": "78-80",
             "original_airdate": "2001-08-26"
@@ -620,24 +620,24 @@
             "original_airdate": "2001-12-02"
         }
     ],
-    "Arabasta": [
+    "Alabasta": [
         {
             "title": "Sir Crocodile, the Pirate",
-            "summary": "In Arabasta, the hero Crocodile appears and puts a decisive end to a pillaging band of pirates. Meanwhile, Mr. 2 Bon Kurei pays a visit to the newly arrived Straw Hats. When he puts his abilities on display, Vivi notices something shocking.",
+            "summary": "In Alabasta, the hero Crocodile appears and puts a decisive end to a pillaging band of pirates. Meanwhile, Mr. 2 Bon Kurei pays a visit to the newly arrived Straw Hats. When he puts his abilities on display, Vivi notices something shocking.",
             "chapters": "155-157",
             "episodes": "92",
             "original_airdate": "2001-12-09"
         },
         {
-            "title": "Landfall in Arabasta",
-            "summary": "The Merry makes landfall at Arabasta’s port town, and while the rest of the Straw Hats wisely don disguises, Luffy runs afoul of an old foe. However, a chance reunion with a flame-wielding member of Luffy’s family might just be the saving grace he needs!",
+            "title": "Landfall in Alabasta",
+            "summary": "The Merry makes landfall at Alabasta’s port town, and while the rest of the Straw Hats wisely don disguises, Luffy runs afoul of an old foe. However, a chance reunion with a flame-wielding member of Luffy’s family might just be the saving grace he needs!",
             "chapters": "157-159",
             "episodes": "93-95",
             "original_airdate": "2001-12-16"
         },
         {
             "title": "Adventure in the Kingdom of Sand",
-            "summary": "The Straw Hats finally start their arduous trek across the deserts of Arabasta! Along the way, they encounter martial-arts-loving dugongs, avian con artists, a giant carnivorous reptile, and a camel with very particular tastes in his passengers.",
+            "summary": "The Straw Hats finally start their arduous trek across the deserts of Alabasta! Along the way, they encounter martial-arts-loving dugongs, avian con artists, a giant carnivorous reptile, and a camel with very particular tastes in his passengers.",
             "chapters": "159, 161-162",
             "episodes": "96-98",
             "original_airdate": "2002-01-13"
@@ -672,7 +672,7 @@
         },
         {
             "title": "Rebellion",
-            "summary": "“The king of Arabasta” appears to order Nanohana’s attack. With this, the people's anger explodes! Meanwhile, Vivi frantically looks for Sanji, and as Crocodile leaves the pirates to their fate, he is suddenly contacted by a \"Mr. Prince.\"",
+            "summary": "“The king of Alabasta” appears to order Nanohana’s attack. With this, the people's anger explodes! Meanwhile, Vivi frantically looks for Sanji, and as Crocodile leaves the pirates to their fate, he is suddenly contacted by a \"Mr. Prince.\"",
             "chapters": "171-174",
             "episodes": "107-108",
             "original_airdate": "2002-04-14"
@@ -756,7 +756,7 @@
         },
         {
             "title": "Vivi's Adventure",
-            "summary": "As the Straw Hats make their escape from Arabasta, Bon Kurei and his men serve to distract Black Cage Hina of the Marines. Meanwhile, Vivi must make a speech, but, more importantly, she must decide whether to stay with the Straw Hats.",
+            "summary": "As the Straw Hats make their escape from Alabasta, Bon Kurei and his men serve to distract Black Cage Hina of the Marines. Meanwhile, Vivi must make a speech, but, more importantly, she must decide whether to stay with the Straw Hats.",
             "chapters": "214-216",
             "episodes": "128-129",
             "original_airdate": "2002-10-20"
